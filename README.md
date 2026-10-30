@@ -110,3 +110,13 @@ The client continues using the unchanged DNS name `inventory:8080` throughout th
 ## Reflection
 
 A stable Service name gives clients one reliable DNS endpoint even when individual Pods are recreated. The Service continuously tracks only ready Pods and load-balances requests across them. This prevents clients from storing fragile Pod IP addresses or names. As a result, readiness failures and Pod replacement can happen without requiring a client configuration change.
+
+## Evidence Screenshots
+
+- [Initial deployment: two replicas and client](evidence/01-deployment.png)
+- [Client traffic reaching both replicas](evidence/02-client-traffic.png)
+- [Readiness failure: one Pod is `0/1` and removed from endpoints](evidence/03-readiness-failure.png)
+- [Pod deletion command](evidence/04-pod-deletion.png)
+- [Replacement Pod, stable Service, and continued client traffic](evidence/05-pod-replacement.png)
+
+The readiness-recovery screenshot should be added as `evidence/06-readiness-recovery.png` after restoring the same Pod to ready status.
