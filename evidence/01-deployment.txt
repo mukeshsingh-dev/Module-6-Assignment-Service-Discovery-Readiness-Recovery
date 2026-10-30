@@ -1,0 +1,12 @@
+=== Pods ===
+NAME                         READY   STATUS    RESTARTS   AGE    IP           NODE                    NOMINATED NODE   READINESS GATES
+inventory-79bfff9b64-sr5ln   1/1     Running   0          4m7s   10.244.0.7   desktop-control-plane   <none>           <none>
+inventory-79bfff9b64-zsdj4   1/1     Running   0          4m7s   10.244.0.6   desktop-control-plane   <none>           <none>
+
+=== Service ===
+NAME        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+inventory   ClusterIP   10.96.242.45   <none>        8080/TCP   4m7s
+
+=== Endpoints ===
+NAME        ENDPOINTS                         AGE
+inventory   10.244.0.6:8080,10.244.0.7:8080   4m7s
