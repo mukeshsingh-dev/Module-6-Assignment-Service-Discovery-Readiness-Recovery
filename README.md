@@ -116,7 +116,6 @@ A stable Service name gives clients one reliable DNS endpoint even when individu
 - [Initial deployment: two replicas and client](evidence/01-deployment.png)
 - [Client traffic reaching both replicas](evidence/02-client-traffic.png)
 - [Readiness failure: one Pod is `0/1` and removed from endpoints](evidence/03-readiness-failure.png)
+- [Readiness recovery: Pod returns to `1/1` and endpoints are restored](evidence/06-readiness-recovery.png)
 - [Pod deletion command](evidence/04-pod-deletion.png)
 - [Replacement Pod, stable Service, and continued client traffic](evidence/05-pod-replacement.png)
-
-The readiness-recovery screenshot should be added as `evidence/06-readiness-recovery.png` after restoring the same Pod to ready status.
